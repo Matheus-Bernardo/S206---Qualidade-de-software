@@ -7,7 +7,7 @@ O site testado faz parte do projeto que está na URL: [URL do Projeto](https://g
 
 1. **Clone o repositório a partir da branch Develop ou da última tag de versão disponível:**
     ```bash
-    git clone [https://github.com/S204-Inatel-2024-2/AgroControl/tree/Develop]
+    git clone https://github.com/S204-Inatel-2024-2/AgroControl/tree/Develop
     ```
 
 2. **Inicie o Backend:**
@@ -37,3 +37,7 @@ Após seguir os passos acima, você estará pronto para executar os testes com o
     npx cypress run
 
 ```
+
+
+## Resultados
+Os resultados podem ser vistos em cypress/reports
