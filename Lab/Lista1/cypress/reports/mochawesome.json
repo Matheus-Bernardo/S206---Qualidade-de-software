@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-25T00:51:23.311Z",
+    "end": "2024-10-25T00:51:36.346Z",
+    "duration": 13035,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d292fece-689c-4f44-b22c-5a376a9a0697",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TesteComFalha.cy.js",
+      "file": "cypress\\e2e\\TesteComFalha.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bde0e482-f0d7-4272-9f11-8bf4efc8c4ec",
+          "title": "Testando cenário para ocasionar erro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Pesquisando elemento inexistente",
+              "fullTitle": "Testando cenário para ocasionar erro Pesquisando elemento inexistente",
+              "timedOut": null,
+              "duration": 10877,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//fazendo login\ncy.visit('http://localhost:3001/');\ncy.get(':nth-child(1) > .sc-uYFMi').type(\"matheus@email.com\");\ncy.get(':nth-child(2) > .sc-uYFMi').type(\"ruralSenha\");\ncy.get('.sc-iwXfZk').click();\n// abrindo o menu lateral e clicando em suporte\n//cy.get('.sc-jwIPbr').click();\n//cy.wait(1000)\ncy.get('a.sc-eOzmre[href=\"/suporte\"]').click();\n//assertiva para dar erro(procurando um h1 com o texto suporte)\ncy.contains('h1', 'Suporte técnico').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Suporte técnico' within the selector: 'h1' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Suporte técnico' within the selector: 'h1' but never did.\n    at Context.eval (webpack://lista1/./cypress/e2e/TesteComFalha.cy.js:16:45)",
+                "diff": null
+              },
+              "uuid": "d6a89e59-ff44-4da5-8adf-f2a897bf82a7",
+              "parentUUID": "bde0e482-f0d7-4272-9f11-8bf4efc8c4ec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d6a89e59-ff44-4da5-8adf-f2a897bf82a7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10877,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

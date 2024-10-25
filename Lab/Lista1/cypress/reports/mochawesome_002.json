@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-25T00:51:51.692Z",
+    "end": "2024-10-25T00:52:09.971Z",
+    "duration": 18279,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9fec262b-65e5-4f75-a75f-f3b5df4e89ab",
+      "title": "",
+      "fullFile": "cypress\\e2e\\opcoesMenu.cy.js",
+      "file": "cypress\\e2e\\opcoesMenu.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cdf3c75e-c1b2-4cb0-8c48-62657c2516c6",
+          "title": "Validar opções disponiveis no menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificando opção Home",
+              "fullTitle": "Validar opções disponiveis no menu Verificando opção Home",
+              "timedOut": null,
+              "duration": 9735,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"matheus@email.com\", \"ruralSenha\");\n// abrindo o menu lateral e verificando opção home\ncy.get('.sc-jwIPbr').click();\ncy.contains('[href=\"/home\"]', 'Home').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<a.sc-eOzmre.iTzwjc>' to be 'visible'\n\nThis element `<a.sc-eOzmre.iTzwjc>` is not visible because its ancestor has `position: fixed` CSS property and it is overflowed by other elements. How about scrolling to the element with `cy.scrollIntoView()`?",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<a.sc-eOzmre.iTzwjc>' to be 'visible'\n\nThis element `<a.sc-eOzmre.iTzwjc>` is not visible because its ancestor has `position: fixed` CSS property and it is overflowed by other elements. How about scrolling to the element with `cy.scrollIntoView()`?\n    at Context.eval (webpack://lista1/./cypress/e2e/opcoesMenu.cy.js:6:45)",
+                "diff": null
+              },
+              "uuid": "14dbc733-c632-4dd8-acff-26f14752a449",
+              "parentUUID": "cdf3c75e-c1b2-4cb0-8c48-62657c2516c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verificando opção Controle Financeiro",
+              "fullTitle": "Validar opções disponiveis no menu Verificando opção Controle Financeiro",
+              "timedOut": null,
+              "duration": 1841,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"matheus@email.com\", \"ruralSenha\");\n// abrindo o menu lateral e verificando opção home\ncy.get('.sc-jwIPbr').click();\ncy.contains('[href=\"/finances\"]', 'Controle Financeiro').should('be.visible');",
+              "err": {},
+              "uuid": "d2657e6a-b043-4ba7-8d9e-9020deec398d",
+              "parentUUID": "cdf3c75e-c1b2-4cb0-8c48-62657c2516c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verificando opção Controle de Serviços",
+              "fullTitle": "Validar opções disponiveis no menu Verificando opção Controle de Serviços",
+              "timedOut": null,
+              "duration": 1532,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"matheus@email.com\", \"ruralSenha\");\n// abrindo o menu lateral e verificando opção home\ncy.get('.sc-jwIPbr').click();\ncy.contains('[href=\"/services\"]', 'Controle de Serviços').should('be.visible');",
+              "err": {},
+              "uuid": "a2f4364d-4bc5-4ca8-a834-21e39a1cfac8",
+              "parentUUID": "cdf3c75e-c1b2-4cb0-8c48-62657c2516c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verificando opção de Gerenciamento de Funcionários",
+              "fullTitle": "Validar opções disponiveis no menu Verificando opção de Gerenciamento de Funcionários",
+              "timedOut": null,
+              "duration": 1615,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"matheus@email.com\", \"ruralSenha\");\n// abrindo o menu lateral e verificando opção home\ncy.get('.sc-jwIPbr').click();\ncy.contains('[href=\"/employees\"]', 'Gerenciamento de Funcionários').should('be.visible');",
+              "err": {},
+              "uuid": "c4fc5821-a156-4598-9ffb-aadb071df3bb",
+              "parentUUID": "cdf3c75e-c1b2-4cb0-8c48-62657c2516c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verificando opção de Suporte",
+              "fullTitle": "Validar opções disponiveis no menu Verificando opção de Suporte",
+              "timedOut": null,
+              "duration": 1486,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"matheus@email.com\", \"ruralSenha\");\n// abrindo o menu lateral e verificando opção home\ncy.get('.sc-jwIPbr').click();\ncy.contains('[href=\"/suporte\"]', 'Suporte').should('be.visible');",
+              "err": {},
+              "uuid": "3e282ab9-1fd4-4283-a4d5-8bdfc077028f",
+              "parentUUID": "cdf3c75e-c1b2-4cb0-8c48-62657c2516c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2657e6a-b043-4ba7-8d9e-9020deec398d",
+            "a2f4364d-4bc5-4ca8-a834-21e39a1cfac8",
+            "c4fc5821-a156-4598-9ffb-aadb071df3bb",
+            "3e282ab9-1fd4-4283-a4d5-8bdfc077028f"
+          ],
+          "failures": [
+            "14dbc733-c632-4dd8-acff-26f14752a449"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16209,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

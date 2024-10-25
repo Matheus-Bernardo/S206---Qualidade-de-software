@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-25T00:51:38.845Z",
+    "end": "2024-10-25T00:51:48.987Z",
+    "duration": 10142,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a90d4e90-0555-4157-89b2-5a0501c274bf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "648ea5ae-6d39-4f1a-92e1-ac4e7d325943",
+          "title": "Testando página inicial",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testar login Inválido - Cenário de erro",
+              "fullTitle": "Testando página inicial Testar login Inválido - Cenário de erro",
+              "timedOut": null,
+              "duration": 5745,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3001/');\ncy.get(':nth-child(1) > .sc-uYFMi').type(\"emailErrado@email.com\");\ncy.get(':nth-child(2) > .sc-uYFMi').type(\"senhaErrada\");\ncy.get('.sc-iwXfZk').click();\ncy.contains('.Toastify__toast-body > :nth-child(2)', 'Erro ao realizar a operação!').should('be.visible');",
+              "err": {},
+              "uuid": "327ade4a-15e8-412f-9efb-21895fe5a15c",
+              "parentUUID": "648ea5ae-6d39-4f1a-92e1-ac4e7d325943",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testar login Válido",
+              "fullTitle": "Testando página inicial Testar login Válido",
+              "timedOut": null,
+              "duration": 1791,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3001/');\ncy.get(':nth-child(1) > .sc-uYFMi').type(\"matheus@email.com\");\ncy.get(':nth-child(2) > .sc-uYFMi').type(\"ruralSenha\");\ncy.get('.sc-iwXfZk').click();\ncy.contains('.Toastify__toast-body > :nth-child(2)', 'Operação realizada com sucesso!').should('be.visible');",
+              "err": {},
+              "uuid": "fe0fb82f-8555-4799-8862-b21496b20adc",
+              "parentUUID": "648ea5ae-6d39-4f1a-92e1-ac4e7d325943",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "327ade4a-15e8-412f-9efb-21895fe5a15c",
+            "fe0fb82f-8555-4799-8862-b21496b20adc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7536,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "lista1",
+  "version": "1.0.0",
+  "description": "lista 1 lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Henrique Lourenço Bernardo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.1",
+    "mochawesome": "^7.1.3"
+  }
+}
