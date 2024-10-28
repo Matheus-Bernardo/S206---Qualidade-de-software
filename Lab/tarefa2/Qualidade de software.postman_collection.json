@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "c52524ec-5ce8-4706-914b-c767df66bce0",
+		"name": "Qualidade de software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34828266",
+		"_collection_link": "https://rwf222.postman.co/workspace/rwf~87df3f13-def4-49fc-8a05-17117d51c7e3/collection/34828266-c52524ec-5ce8-4706-914b-c767df66bce0?action=share&source=collection_link&creator=34828266"
+	},
+	"item": [
+		{
+			"name": "aula1-pokemon",
+			"item": [
+				{
+					"name": "buscaPokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://pokeapi.co/api/v2/pokemon/ditto"
+					},
+					"response": []
+				},
+				{
+					"name": "buscaPokemonInexistente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://pokeapi.co/api/v2/pokemon/Matheus"
+					},
+					"response": []
+				},
+				{
+					"name": "buscaPokemonInexistente Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://pokeapi.co/api/v2/pokemon/outroPokemon"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
