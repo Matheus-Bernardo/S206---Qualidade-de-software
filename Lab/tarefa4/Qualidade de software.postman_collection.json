@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "c52524ec-5ce8-4706-914b-c767df66bce0",
+		"name": "Qualidade de software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34828266",
+		"_collection_link": "https://rwf222.postman.co/workspace/rwf~87df3f13-def4-49fc-8a05-17117d51c7e3/collection/34828266-c52524ec-5ce8-4706-914b-c767df66bce0?action=share&source=collection_link&creator=34828266"
+	},
+	"item": [
+		{
+			"name": "aula1-pokemon",
+			"item": [
+				{
+					"name": "buscaPokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://pokeapi.co/api/v2/pokemon/ditto"
+					},
+					"response": []
+				},
+				{
+					"name": "buscaPokemonInexistente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://pokeapi.co/api/v2/pokemon/Matheus"
+					},
+					"response": []
+				},
+				{
+					"name": "buscaPokemonInexistente Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://pokeapi.co/api/v2/pokemon/outroPokemon"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reqres",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "BuscarUsuarios",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}users?page=2",
+									"host": [
+										"{{URL}}users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "UpdateUsuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"    pm.expect(pm.response.code).to.equal(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is within an acceptable range\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Validate the response schema for required fields - name, job, and updatedAt\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"    pm.expect(responseData.name).to.exist;\r",
+											"    pm.expect(responseData.job).to.exist;\r",
+											"    pm.expect(responseData.updatedAt).to.exist;\r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Matheus\",\r\n  \"job\": \"dev junior\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}users/182"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "ApagandoUsuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{URL}}users/182"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "CriandoUser",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Updated status code test to 201\r",
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Check if the name property in the response is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.name).to.eql(\"Matheus\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Matheus\",\r\n  \"job\": \"dev\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}users"
+							},
+							"response": []
+						},
+						{
+							"name": "RegistrandoUsuarios",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 400\", function () {\r",
+											"  pm.expect(pm.response.code).to.equal(400);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Error field should exist and be a string\", function () {\r",
+											"  const responseData = pm.response.json();\r",
+											"\r",
+											"  pm.expect(responseData).to.be.an('object');\r",
+											"  pm.expect(responseData.error).to.be.a('string');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Verify the presence of Content-Type header with value application/json\", function () {\r",
+											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"matheus@reqres.com\",\r\n    \"password\": \"senha\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}register"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
