@@ -14,6 +14,7 @@ O site testado faz parte do projeto que está na URL: [URL do Projeto](https://g
     ```bash
     cd backend
     npm install
+    cd backend/src
     nodemon server.js
     ```
 
@@ -21,6 +22,7 @@ O site testado faz parte do projeto que está na URL: [URL do Projeto](https://g
     ```bash
     cd frontend
     npm install
+    cd frontend/src
     npm start
     ```
 
