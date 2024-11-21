@@ -41,3 +41,5 @@ A seguir, uma descrição dos principais casos de teste implementados:
 
 ### Resultados
 O resultado dos testes podem ser vistos através do relatório localizado em ~cypress/e2e/reports/index.html
+
+![Resultado das assertivas](cypress/reports/resultados.png)
