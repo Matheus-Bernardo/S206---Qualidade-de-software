@@ -34,7 +34,7 @@ A seguir, uma descrição dos principais casos de teste implementados:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Matheus-Bernardo/S206---Qualidade-de-software/tree/Projetps/Lab/Prova1
+   git clone https://github.com/Matheus-Bernardo/S206---Qualidade-de-software.git
    npm i
    cd lab/Prova1 e rode o comando npx cypress run
 
@@ -42,4 +42,7 @@ A seguir, uma descrição dos principais casos de teste implementados:
 ### Resultados
 O resultado dos testes podem ser vistos através do relatório localizado em ~cypress/e2e/reports/index.html
 
+
 ![Resultado das assertivas](cypress/reports/resultados.png)
+
+
