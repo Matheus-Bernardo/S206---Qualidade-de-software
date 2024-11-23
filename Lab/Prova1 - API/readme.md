@@ -21,3 +21,8 @@ Antes de iniciar os testes, siga as seguintes instruções:
 ## Parte da prova
 
 Importe os arquivos JSON (collection e environment) para o Postman e execute a collection. Os resultados podem ser visualizados através da aba de testes ou pelo relatório executado pelo Newman.
+
+
+## Resultados
+Os resultados dos testes estão disponibilizados dentro da pasta "newman". Caso queira gerar um novo relatório, utilize do comando `newman run Prova2.postman_collection.json 
+-e QualidadeSoftwareInatel.postman_environment.json -r html` a partir do diretório raiz.
